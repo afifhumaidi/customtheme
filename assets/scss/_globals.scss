@@ -1,5 +1,29 @@
 @import './variables';
 
+$media_queries : (
+    'xs'    : "only screen and (max-width: 575.98px)",
+    'sm'    : "only screen and (min-width: 576px) and (max-width: 767.98px)",
+    'md'    : "only screen and (min-width: 768px) and (max-width: 991.98px)",
+    'lg'    : "only screen and (min-width: 992px) and (max-width: 1199.98px)",
+    'xl'    : "only screen and (min-width: 1367px)",
+);
+
+@mixin media-breakpoint-only($breakpoints) {
+    $conditions : ();
+    @each $breakpoint in $breakpoints {
+        // If the key exists in the map
+        $conditions: append(
+            $conditions,
+            #{inspect(map-get($media_queries, $breakpoint))},
+            comma
+        );
+    }
+
+    @media #{$conditions} {
+        @content;
+    }
+}
+
 *{
     font-family: $font-family;
     font-size: 16px;

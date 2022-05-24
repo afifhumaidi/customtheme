@@ -1,7 +1,9 @@
 @import '../variables';
+@import '../globals';
 
 .header{
-    background-color: #C2C6CC;
+    background-color: #EFF0F2;
+    min-width: 1366px;
     height: 70px;
     
     &__logo{

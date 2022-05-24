@@ -1,0 +1,63 @@
+@import '../../variables';
+@import '../../globals';
+
+.banner{
+    position: relative;
+    width: 1366px;
+    height: 647px;
+    margin: auto;
+    background-color: #EFF0F2;
+    top: -70px;
+    z-index: -1;
+   
+    &__search-header{
+        font-size: 40px;
+        font-weight: $fw-bold;
+        width: 433px;
+        height: 55px;
+        position: absolute;
+        top: 429px;
+        left: 316px;
+    }
+
+    &__search-bar{
+        width: 794px;
+        height: 70px;
+        border-radius: 35px;
+        background-color: #fff;
+        position: absolute;
+        top: 501px;
+        left: 286px;
+
+        &_text{
+            width: 719px;
+
+            p{
+                font-weight: $fw-semibold;
+                margin: 0px;
+
+                &:first-child{
+                    font-size: 12px;
+                }
+                &:last-child{
+                    font-size: 14px;
+                    color: $text-color-secondary;
+                }
+            }
+        }
+
+        &_round{
+            background-color: $text-color-primary;
+            border-radius: 50%;
+            width: 54px;
+            height: 54px;
+            position: relative;
+
+            svg{
+                position: absolute;
+                left: 30%;
+                top: 30%;
+            }
+        }
+    }
+}
