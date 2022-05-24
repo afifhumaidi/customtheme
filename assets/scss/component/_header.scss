@@ -1,0 +1,59 @@
+@import '../variables';
+
+.header{
+    background-color: #C2C6CC;
+    height: 70px;
+    
+    &__logo{
+        font-size: 35px;
+        font-weight: $fw-extrabold;
+    }
+
+    &__button{
+        &_header{
+            background-color: $text-color-primary;
+            color: white;
+            font-size: 14px;
+            line-height: 46px;
+            font-weight: $fw-semibold;
+            width: 186px;
+            height: 46px;
+            border: 0px;
+            padding: 0px;
+            border-radius: 35px;
+            margin-right: 10px;
+        }
+
+        &_auth{
+            background-color: #fff;
+            border-radius: 35px;
+            line-height: 46px;
+            width: 98px;
+            height: 46px;
+            border: 0px;
+            padding: 0px;
+        }
+    }
+}
+
+.menu{
+    font-weight: $fw-semibold;
+    &__list{
+        list-style: none;
+        margin: 0px;
+        padding: 0px;
+
+        li{
+            display: inline-block;
+            margin: 0px 15px;
+
+            &:first-child{
+                margin-left: 0px;
+            }
+
+            &:last-child{
+                margin-right: 0px;
+            }
+        }
+    }
+}
